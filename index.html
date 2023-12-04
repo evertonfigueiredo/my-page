@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="Digitalizando" />
+  <title>Everton Dev | Venha aprender a programar</title>
+
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+
+  <!-- Favicons-->
+  <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" /> -->
+
+  <!-- GOOGLE WEB FONT -->
+  <link href="https://fonts.googleapis.com/css?family=Caveat|Poppins:300,400,500,600,700&amp;display=swap"
+    rel="stylesheet" />
+
+  <!-- BASE CSS -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./css/style.css" rel="stylesheet" />
+  <link href="./css/vendors.css" rel="stylesheet" />
+
+  <!-- YOUR CUSTOM CSS -->
+  <link href="./css/custom.css" rel="stylesheet" />
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body class="style_3">
+  <div id="preloader">
+    <div data-loader="circle-side"></div>
+  </div>
+  <!-- /Preload -->
+
+  <div id="loader_form">
+    <div data-loader="circle-side-2"></div>
+  </div>
+  <!-- /loader_form -->
+
+  <header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-5">
+          <a href="index.html"><img src="img/dev.png" id="logo-nav" alt="" width="50" height="55" /></a>
+        </div>
+        <div class="col-7">
+          <div id="social">
+            <ul>
+              <!-- <li>
+                  <a href="#0"><i class="social_facebook"></i></a>
+                </li> -->
+              <li>
+                <a target="_blank" href="https://www.youtube.com/@evertondev"><i class="social_youtube"></i></a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.instagram.com/evertondev"><i class="social_instagram"></i></a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.linkedin.com/in/everton-figueiredo/"><i
+                    class="social_linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </header>
+  <!-- /header -->
+
+  <div class="wrapper_centering">
+    <div class="container_centering">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-xl-6 col-lg-6 d-flex align-items-center">
+            <div class="main_title_1">
+              <h3>
+                <img src="img/dev.png" id="logo-center" width="80" height="80" alt="" />
+                Everton Dev
+              </h3>
+              <p id="text-info">
+                Para ter acesso ao código do video .
+              </p>
+              <p><em>- Everton Figueiredo</em></p>
+            </div>
+          </div>
+          <!-- /col -->
+          <div class="col-xl-5 col-lg-5">
+            <div id="wizard_container">
+              <div id="top-wizard">
+                <div id="progressbar"></div>
+              </div>
+              <!-- /top-wizard -->
+              <form id="wrapped" method="POST" autocomplete="off">
+                <input id="website" name="website" type="text" value="" />
+                <!-- Leave for security protection, read docs for details -->
+                <div id="middle-wizard">
+                  <div class="submit step">
+                    <h3 class="main_question">
+                      Preencha seus dados para envio.
+                    </h3>
+                    <div class="form-group">
+                      <label for="firstname">Primeiro Nome</label>
+                      <input type="text" name="firstname" id="firstname" class="form-control required"
+                        required="required" />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Seu E-mail</label>
+                      <input type="email" name="email" id="email" class="form-control required" required="required" />
+                    </div>
+                    <div class="form-group">
+                      <label for="telephone">Whatsapp</label>
+                      <input type="text" name="telephone" id="telephone" class="form-control" required="required" />
+                    </div>
+                    <!-- /row -->
+                    <div class="form-group terms">
+                      Ao clicar em enviar você esta concordando em receber
+                      e-mails.
+                      <!-- <a
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#terms-txt"
+                            style="color: #fff; text-decoration: underline"
+                            >Terms and conditions</a
+                          > -->
+                      <!-- <input
+                            type="radio"
+                            name="terms"
+                            value="Yes"
+                            class="required"
+                            required="required"
+                          />
+                          <span class="checkmark"></span> -->
+                    </div>
+                  </div>
+                  <!-- /step 5-->
+                </div>
+                <!-- /middle-wizard -->
+
+                <div id="bottom-wizard">
+                  <button type="button" onclick="enviar()" name="process" class="submit">
+                    Enviar
+                  </button>
+
+                </div>
+                <!-- /bottom-wizard -->
+              </form>
+            </div>
+            <!-- /Wizard container -->
+          </div>
+          <!-- /col -->
+        </div>
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container_centering -->
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">©2023</div>
+          <div class="col-md-9">
+            <ul class="clearfix">
+              <li>
+                <a href="https://www.instagram.com/digitalizando.empresas/" class="animated_link"
+                  target="_parent">@Digitalizando Empresas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container-fluid -->
+    </footer>
+    <!-- /footer -->
+  </div>
+  <!-- /wrapper_centering -->
+
+  <!-- COMMON SCRIPTS -->
+  <script src="./js/jquery-3.6.3.min.js"></script>
+  <script src="./js/common_scripts.min.js"></script>
+  <script src="./js/functions.js"></script>
+
+  <!-- Wizard script -->
+  <script src="./js/survey_func.js"></script>
+  <script src="https://unpkg.com/imask"></script>
+  <script>
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const videoCod = urlParams.get("videoCod");
+
+    let logo_center = document.querySelector("#logo-center");
+    let logo_nav = document.querySelector("#logo-nav");
+
+    const element = document.getElementById('telephone');
+    const maskOptions = {
+      mask: '(00)00000-0000'
+    };
+    const mask = IMask(element, maskOptions);
+
+    const textInfo = document.querySelector("#text-info")
+
+    if (!videoCod) {
+      textInfo.innerHTML = "Para receber novidades do meu canal, preencha o formulário com seus dados, e se mantenha sempre atualizado! "
+    } else {
+      fetch(`https://amused-tick-coat.cyclic.app/aulas/${videoCod}`)
+        .then(response => response.json())
+        .then(data => {
+          textInfo.innerHTML = "Para ter acesso ao conteúdo do vídeo "
+          textInfo.innerHTML += `"<strong>${data.data.aula.name}</strong>" `
+          textInfo.innerHTML += "preencha o formulário com seus dados que enviaremos para o seu e-mail!"
+        })
+    }
+
+    function enviar() {
+
+      const fone = document.getElementById('telephone');
+      const name = document.getElementById('firstname');
+      const email = document.getElementById('email');
+
+
+
+      if (name.value.trim() === '') {
+        criarSpan(name, 'Campo de nome não pode estar vazio.');
+        return
+      } else {
+        removerSpan(name);
+      }
+
+      if (email.value.trim() === '') {
+        criarSpan(email, 'Campo de email não pode estar vazio.');
+        return
+      } else {
+        removerSpan(email);
+      }
+
+      if (fone.value.trim() === '') {
+        criarSpan(fone, 'Campo de telefone não pode estar vazio.');
+        return
+      } else {
+        removerSpan(fone);
+      }
+
+      valueFone = fone.value.trim()
+      valueName = name.value.trim()
+      valueEmail = email.value.trim()
+      let user = {
+        id: videoCod,
+        fone: valueFone,
+        name: valueName,
+        email: valueEmail
+      }
+
+      fetch("https://amused-tick-coat.cyclic.app/send/", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Erro ao enviar E-mail, aguarde e tente novamente mais tarde!');
+          }
+          return response.json();
+        })
+        .then(data => {
+          // Manipule a resposta JSON aqui
+          swal({
+            title: "E-mail enviado com sucesso!",
+            icon: "success",
+          });
+          console.log(data);
+        })
+        .catch(error => {
+          // Manipule os erros aqui
+          swal({
+            title: "Erro ao enviar E-mail, aguarde e tente novamente mais tarde!",
+            icon: "error",
+          });
+          console.error('Erro:', error);
+        });
+    }
+
+    function criarSpan(elemento, mensagem) {
+      const avisoExistente = elemento.nextElementSibling;
+      if (avisoExistente && avisoExistente.classList.contains('aviso')) {
+        avisoExistente.textContent = mensagem;
+      } else {
+        const span = document.createElement('span');
+        span.textContent = mensagem;
+        span.classList.add('aviso');
+        elemento.parentNode.insertBefore(span, elemento.nextSibling);
+      }
+    }
+
+    function removerSpan(elemento) {
+      const avisoExistente = elemento.nextElementSibling;
+      if (avisoExistente && avisoExistente.classList.contains('aviso')) {
+        avisoExistente.remove();
+      }
+    }
+
+  </script>
+</body>
+
+</html>
