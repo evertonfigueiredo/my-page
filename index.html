@@ -209,7 +209,7 @@
     if (!videoCod) {
       textInfo.innerHTML = "Para receber novidades do meu canal, preencha o formulário com seus dados, e se mantenha sempre atualizado! "
     } else {
-      fetch(`https://amused-tick-coat.cyclic.app/aulas/${videoCod}`)
+      fetch(`https://envio-email-youtube.vercel.app/aulas/${videoCod}`)
         .then(response => response.json())
         .then(data => {
           textInfo.innerHTML = "Para ter acesso ao conteúdo do vídeo "
@@ -257,7 +257,7 @@
         email: valueEmail
       }
 
-      fetch("https://amused-tick-coat.cyclic.app/send/", {
+      fetch("https://envio-email-youtube.vercel.app/send/", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
