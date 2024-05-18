@@ -144,7 +144,7 @@
                 <!-- /middle-wizard -->
 
                 <div id="bottom-wizard">
-                  <button type="button" onclick="enviar()" name="process" class="submit">
+                  <button type="button" id="button" onclick="enviar()" name="process" class="submit">
                     Enviar
                   </button>
 
@@ -223,7 +223,8 @@
       const fone = document.getElementById('telephone');
       const name = document.getElementById('firstname');
       const email = document.getElementById('email');
-
+      var button = document.getElementById("button");
+      button.disabled = true;
 
 
       if (name.value.trim() === '') {
@@ -267,6 +268,7 @@
         .then(response => {
           if (!response.ok) {
             throw new Error('Erro ao enviar E-mail, aguarde e tente novamente mais tarde!');
+            button.disabled = false;
           }
           return response.json();
         })
@@ -276,7 +278,7 @@
             title: "E-mail enviado com sucesso!",
             icon: "success",
           });
-          console.log(data);
+          button.disabled = false;
         })
         .catch(error => {
           // Manipule os erros aqui
@@ -284,7 +286,7 @@
             title: "Erro ao enviar E-mail, aguarde e tente novamente mais tarde!",
             icon: "error",
           });
-          console.error('Erro:', error);
+          button.disabled = false;
         });
     }
 
